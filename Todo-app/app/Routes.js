@@ -1,8 +1,7 @@
 var Todo = require('./models/todo');
 
 function getTodos(res) {
-    Todo.find(function (err, todos) {
-
+    Todo.find(function (err, todos) {    
         // if there is an error retrieving, send the error. nothing after res.send(err) will execute
         if (err) {
             res.send(err);
